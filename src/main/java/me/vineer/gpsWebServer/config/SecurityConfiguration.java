@@ -37,15 +37,9 @@ public class SecurityConfiguration {
         UserDetails vineer =
                 User.withDefaultPasswordEncoder()
                         .username("Vineer")
-                        .password("0192837465Ty+-")
+                        .password("admin")
                         .roles("USER", "ADMIN")
                         .build();
-        UserDetails astrosander =
-                User.withDefaultPasswordEncoder()
-                        .username("astrosander")
-                        .password("1111")
-                        .roles("USER")
-                        .build();
-        return new InMemoryUserDetailsManager(vineer, astrosander);
+        return new InMemoryUserDetailsManager(vineer);
     }
 }
